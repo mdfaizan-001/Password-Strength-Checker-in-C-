@@ -6,10 +6,7 @@ using namespace std;
 int main() {
     string password;
 
-    cout << "=====================================\n";
-    cout << "      PASSWORD STRENGTH CHECKER\n";
-    cout << "=====================================\n";
-
+    cout << " -- PASSWORD STRENGTH CHECKER --\n";
     cout << "Enter Password: ";
     cin >> password;
 
@@ -29,14 +26,13 @@ int main() {
             hasSpecial = true;
     }
 
-    cout << "\n---------- RESULT ----------\n";
+    cout << "\n-- RESULT --\n";
 
     if (password.length() >= 8 &&
         hasUpper &&
         hasLower &&
         hasDigit &&
         hasSpecial) {
-
         cout << "Password Strength : STRONG\n";
     }
     else if (password.length() >= 6 &&
