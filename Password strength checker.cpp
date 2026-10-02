@@ -2,6 +2,7 @@
 #include <string>
 #include <cctype>
 using namespace std;
+
 int main() {
     string password;
     cout << " -- PASSWORD STRENGTH CHECKER --\n";
@@ -21,6 +22,7 @@ int main() {
         else
             hasSpecial = true;
     } 
+    
     cout << "\n-- RESULT --\n";
     if (password.length() >= 8 &&
         hasUpper &&
@@ -29,6 +31,7 @@ int main() {
         hasSpecial) {
         cout << "Password Strength : STRONG\n";
     }
+        
     else if (password.length() >= 6 &&
              ((hasUpper && hasLower) ||
               (hasDigit && hasSpecial))) {
@@ -37,6 +40,7 @@ int main() {
     else {
         cout << "Password Strength : WEAK\n";
     }
+    
     cout << "\nPassword Analysis\n";
     cout << "Length        : " << password.length() << endl;
     cout << "Uppercase     : " << (hasUpper ? "Yes" : "No") << endl;
